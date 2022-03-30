@@ -1,5 +1,31 @@
 @import url('https://fonts.gooleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
+
+/* Keyframes */
+@keyframes shrinkSquareToCircle 
+{
+    0% {
+        border-radius: 0%;
+    }
+    100% {
+        border-radius: 50%;
+    }
+}
+
+@keyframes slideInFromLeft 
+{
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* ----- */
+
+
+/* Global styles */
+
 *
 {
     margin: 0;
@@ -7,15 +33,16 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body
 {
     background: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 300;
 }
 
-/* Modify default anchor styles */
 a
 {
     color: inherit;
@@ -40,6 +67,19 @@ a
     list-style: none;
 }
 
+strong {
+    font-weight: 500;
+}
+
+a:hover
+{
+    color: rgb(142, 141, 202);
+}
+/* ----- */
+
+
+/* Sidebar */
+
 .sidebar
 {
     position: relative;
@@ -48,13 +88,14 @@ a
     color: white;
 }
 
-/* On hover (in the sidebar) */
-.sidebar a:hover
+h1
 {
-    color: rgb(142, 141, 202);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
-.headshot
+.sidebar .headshot
 {
     display: flex;
     flex-direction: column;
@@ -63,17 +104,18 @@ a
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-@keyframes shrinkSquareToCircle 
+.sidebar .headshot strong
 {
-    0% {
-        border-radius: 0%;
-    }
-    100% {
-        border-radius: 50%;
-    }
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin-top: 20px;
 }
 
-.imgBox
+
+.sidebar .imgBox
 {
     border-radius: 50%;
     overflow: hidden;
@@ -82,31 +124,16 @@ a
     text-align: center;
 }
 
-.imgBox.animation
+.sidebar .imgBox.animation
 {
     animation: 1s ease-out 0s 1 shrinkSquareToCircle;
 }
 
-.imgBox img
+.sidebar .imgBox img
 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-.headshot h2
-{
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 600;
-    line-height: 1.4em;
-    margin-top: 20px;
-
-}
-.headshot span
-{
-    font-weight: 300;
-    font-size: 0.8em;
 }
 
 .sidebar section
@@ -114,16 +141,9 @@ a
     margin-top: 40px;
 }
 
-.sidebar section .title
-{
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
 .sidebar li
 {
     margin: 10px 0;
-    font-weight: 300;
 }
 .sidebar .fas, .sidebar .fab
 {
@@ -132,15 +152,10 @@ a
     text-align: center;
 }
 
-.contactInfo li
+.sidebar .contactInfo li
 {
     display: grid;
     grid-template-columns: 30px 1fr;
-}
-.subText
-{
-    color: hsl(199, 27%, 47%);
-    font-style: italic;
 }
 
 .icon
@@ -149,30 +164,14 @@ a
     margin-right: 10px;
 }
 
-.education .year
+.sidebar .year
 {
     color: #03a9f4;
     font-weight: 500;
     font-size: 0.8em;
 }
-.education .degree
-{
-    font-weight: 500;
-}
-.degree .subText
-{
-    font-weight: 300;
-}
 
-@keyframes slideInFromLeft 
-{
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
+
 
 .percent.animation div
 {
@@ -204,6 +203,9 @@ a
     height: 100%;
     background: #03a9f4;
 }
+
+/* ----- */
+
 .content
 {
     padding: 40px;
@@ -235,7 +237,7 @@ a
     min-width: 150px;
 }
 
-.experience .text h3
+.content strong
 {
     text-transform: uppercase;
     color: #2a7da2;
@@ -252,11 +254,15 @@ a
     list-style: inside;
 }
 
+.content section>ul>li
+{
+    margin: 20px 0;
+}
+
 .experience>ul>li
 {
     display: flex;
     flex-direction: row;
-    margin: 20px 0;
 }
 
 .ratedSkills li
@@ -312,10 +318,10 @@ a
 {
     color: #333;
     font-weight: 500;
-    margin: 10px 0;
+    margin: 5px 10px;
 }
 
-/* @media (max-width: 1000px) and (not(print))
+@media (max-width: 1000px)
 {
     .container
     {
@@ -332,7 +338,7 @@ a
     }
 }
 
-@media (max-width: 600px) and (not(print))
+@media (max-width: 600px)
 {
     .experience>ul>li
     {
@@ -355,7 +361,7 @@ a
     {
         grid-template-columns: repeat(1, 1fr);
     }
-} */
+}
 
 @media print { 
     body
