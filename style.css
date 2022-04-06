@@ -1,4 +1,6 @@
 @import url('https://fonts.gooleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('styles/content.css');
+@import url('styles/sidebar.css');
 
 
 /* Keyframes */
@@ -78,133 +80,12 @@ a:hover
 /* ----- */
 
 
-/* Sidebar */
-
-.sidebar
-{
-    position: relative;
-    background: #003147;
-    padding: 40px;
-    color: white;
-}
-
-h1
-{
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-
-.sidebar .headshot
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.sidebar .headshot strong
-{
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 600;
-    line-height: 1.4em;
-    margin-top: 20px;
-}
-
-
-.sidebar .imgBox
-{
-    border-radius: 50%;
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-}
-
-.sidebar .imgBox.animation
-{
-    animation: 1s ease-out 0s 1 shrinkSquareToCircle;
-}
-
-.sidebar .imgBox img
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.sidebar section
-{
-    margin-top: 40px;
-}
-
-.sidebar li
-{
-    margin: 10px 0;
-}
-.sidebar .fas, .sidebar .fab
-{
-    color: #03a9f4;
-    width: 20px;
-    text-align: center;
-}
-
-.sidebar .contactInfo li
-{
-    display: grid;
-    grid-template-columns: 30px 1fr;
-}
-
 .icon
 {
     font-size: 18px;
     margin-right: 10px;
 }
 
-.sidebar .year
-{
-    color: #03a9f4;
-    font-weight: 500;
-    font-size: 0.8em;
-}
-
-
-
-.percent.animation div
-{
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-}
-
-.percent
-{
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    margin-top: 5px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-}
-
-.languages .percent
-{
-    height: 6px;
-    background: #081921;
-}
-
-.languages .percent div
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #03a9f4;
-}
-
-/* ----- */
 
 .content
 {
@@ -256,7 +137,14 @@ h1
 
 .content section>ul>li
 {
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content section ul.tight>li
+{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .experience>ul>li
@@ -265,12 +153,11 @@ h1
     flex-direction: row;
 }
 
-.ratedSkills li
+.content .ratedSkills>li
 {
     display: grid;
     grid-template-columns: 150px 1fr;
     align-items: center;
-    margin-top: 5px;
 }
 
 .otherSkills
