@@ -66,6 +66,12 @@
 {
     margin: 10px 0;
 }
+
+.sidebar ul.tight>li
+{
+    margin: 0;
+}
+
 .sidebar .fas, .sidebar .fab
 {
     color: #03a9f4;
@@ -86,7 +92,6 @@
     font-size: 0.8em;
 }
 
-
 .sidebar .percent.animation div
 {
     animation: 1s ease-out 0s 1 slideInFromLeft;
@@ -103,17 +108,38 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar .languages .percent
+.sidebar .percent
 {
     height: 6px;
     background: #081921;
 }
 
-.sidebar .languages .percent div
+.sidebar .percent div
 {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     background: #03a9f4;
+}
+
+.sidebar .ratedSkills>li
+{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+}
+
+.sidebar .otherSkills
+{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    /* color: #333; */
+}
+
+
+.sidebar .skills ul .listSeperator
+{
+    margin: 20px;
 }

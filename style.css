@@ -3,7 +3,6 @@
 @import url('styles/sidebar.css');
 
 
-/* Keyframes */
 @keyframes shrinkSquareToCircle 
 {
     0% {
@@ -23,10 +22,6 @@
         transform: translateX(0);
     }
 }
-/* ----- */
-
-
-/* Global styles */
 
 *
 {
@@ -87,126 +82,7 @@ a:hover
 }
 
 
-.content
-{
-    padding: 40px;
-}
 
-.content .title
-{
-    color: #003147;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.content section
-{
-    margin-bottom: 40px;
-}
-.content section:last-of-type
-{
-    margin-bottom: 0;
-}
-
-.year_location
-{
-    text-transform: uppercase;
-    color: #848c90;
-    font-weight: 600;
-    font-size: 0.8em;
-    min-width: 150px;
-}
-
-.content strong
-{
-    text-transform: uppercase;
-    color: #2a7da2;
-    font-size: 1em;
-}
-
-.experience .text
-{
-    color: #333;
-}
-
-.experience .text li
-{
-    list-style: inside;
-}
-
-.content section>ul>li
-{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.content section ul.tight>li
-{
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.experience>ul>li
-{
-    display: flex;
-    flex-direction: row;
-}
-
-.content .ratedSkills>li
-{
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    align-items: center;
-}
-
-.otherSkills
-{
-    display: grid;
-    margin-top: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    color: #333;
-}
-
-.skills .text
-{
-    text-transform: uppercase;
-    color: #848c99;
-    font-weight: 500;
-}
-
-.skills .percent
-{
-    height: 10px;
-    background: #f0f0f0;
-}
-
-.skills .percent div
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #03a9f4;
-}
-
-.skills ul .listSeperator
-{
-    margin: 20px;
-}
-
-.interests ul
-{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.interests li
-{
-    color: #333;
-    font-weight: 500;
-    margin: 5px 10px;
-}
 
 @media (max-width: 1000px)
 {

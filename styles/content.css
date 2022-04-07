@@ -1,0 +1,121 @@
+.content
+{
+    padding: 40px;
+}
+
+.content h1
+{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.content section
+{
+    margin-bottom: 40px;
+}
+
+.content section:last-of-type
+{
+    margin-bottom: 0;
+}
+
+.content strong
+{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 1em;
+}
+
+.content section>ul>li
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content section ul.tight>li
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.content .year-description-table>li
+{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Select the first element in each table row (which should be the year) */
+.content .year-description-table>li>*:first-child
+{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+    font-size: 0.8em;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+
+/* Restore list bullets for nested lists */
+.content li li
+{
+    list-style: outside;
+    margin-left: 15px;
+}
+
+.content .ratedSkills>li
+{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+}
+
+.content .otherSkills
+{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    color: #333;
+}
+
+.content .skills .text
+{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+
+.content .skills .percent
+{
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.content .skills .percent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.content .skills ul .listSeperator
+{
+    margin: 20px;
+}
+
+.content .interests ul
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.content .interests li
+{
+    color: #333;
+    font-weight: 500;
+    margin: 5px 10px;
+}
